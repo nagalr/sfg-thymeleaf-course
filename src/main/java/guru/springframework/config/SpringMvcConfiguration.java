@@ -40,7 +40,8 @@ public class SpringMvcConfiguration implements WebMvcConfigurer {
 
         /*
          Configuration that allows to pass-in a Language parameter
-         on the url string, and set a different language
+         on the url string, and set a different language.
+         passing here 'localeChangeInterceptor' Bean.
         */
         interceptorRegistry.addInterceptor(localeChangeInterceptor());
     }
