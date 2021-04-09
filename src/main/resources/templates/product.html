@@ -133,10 +133,10 @@
 </head>
 <body>
 
-<div class="jumbotron">
+<div class="jumbotron" th:replace="fragments/jumbotron.html :: jumbo">
     <div class="container">
-        <h1>Spring Framework Guru</h1>
-        <p class="lead" th:text="#{index.courses.tagline}">Online Courses for Spring Framework</p>
+        <h1>Spring Framework</h1>
+        <p class="lead" th:text="#{index.courses.tagline}">The Spring Framework</p>
     </div>
 </div>
 
