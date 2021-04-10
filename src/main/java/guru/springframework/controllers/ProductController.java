@@ -20,7 +20,7 @@ public class ProductController {
 
     @GetMapping("/product")
     public String getProduct() {
-        return "product";
+        return "index";
     }
 
     @GetMapping("/product/{id}")
