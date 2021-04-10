@@ -152,8 +152,10 @@
                 <img src="../static/images/SpringIntroThumb.png"
                      th:src="@{/images/SpringIntroThumb.png}"
                      class="center-block"/>
-            <div th:text="${prod.author.firstName + ' ' +prod.author.lastName}">Author Name</div>
-            <div th:text="${'Price: ' + prod.price + '$'}">Price</div>
+            <div class="row col-xs-12">
+                <div class="small course-author-name" th:text="${prod.author.firstName + ' ' +prod.author.lastName}">Author Name</div>
+                <div class="small col-xs-8 course-price" th:text="${prod.price > 0 ? prod.price + '$': 'FREE'}">Price</div>
+            </div>
         </div>
         <div class="col-md-6">
              <div>

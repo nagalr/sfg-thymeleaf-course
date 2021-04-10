@@ -139,6 +139,13 @@
     </div>
 </div>
 
+<table class="table-bordered">
+    <tr th:each="item: ${productsList}">
+        <td th:text="${item.courseName}"></td>
+        <td th:text="${item.author.firstName + ' ' + item.author.lastName}"></td>
+    </tr>
+</table>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
