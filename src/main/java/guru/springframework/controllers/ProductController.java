@@ -4,7 +4,7 @@ import guru.springframework.services.ProductServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * Created by jt on 1/20/16.
@@ -24,7 +24,7 @@ public class ProductController {
     }
 
     @GetMapping("/product/{id}")
-    public String getProductById(@RequestParam Integer id, Model model) {
+    public String getProductById(@PathVariable Integer id, Model model) {
         model.addAttribute("prod", productService.getProduct(id));
 
         return "product";
