@@ -3,7 +3,7 @@ package guru.springframework.controllers;
 import guru.springframework.services.ProductServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -18,12 +18,12 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @RequestMapping("/product")
+    @GetMapping("/product")
     public String getProduct() {
         return "product";
     }
 
-    @RequestMapping("/product/{id}")
+    @GetMapping("/product/{id}")
     public String getProductById(@RequestParam Integer id, Model model) {
         model.addAttribute("prod", productService.getProduct(id));
 
