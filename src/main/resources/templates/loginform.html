@@ -150,7 +150,7 @@
                             <input type="text" class="form-control" name="username" id="username"/>
                             <span class="help-block" th:if="${#fields.hasErrors('username')}">
                                 <ul>
-                                    <li th:each="err : ${#fields.errors('username')}" th:text="${err}"/>
+                                    <li th:each="err : ${#fields.errors('username')}" th:text="${err}"></li>
                                 </ul>
                             </span>
                         </div>
@@ -163,7 +163,7 @@
                             <input type="password" class="form-control" name="password" id="password"/>
                             <span class="help-block" th:if="${#fields.hasErrors('password')}">
                                 <ul>
-                                    <li th:each="err : ${#fields.errors('password')}" th:text="${err}"/>
+                                    <li th:each="err : ${#fields.errors('password')}" th:text="${err}"></li>
                                 </ul>
                             </span>
                         </div>
