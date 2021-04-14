@@ -25,14 +25,13 @@ public class CheckoutController {
     }
 
     @RequestMapping(value = "/docheckout", method = RequestMethod.POST)
-    public String doCheckout(@Valid CheckoutCommand checkoutCommand, BindingResult bindingResult){
+    public String doCheckout(@Valid CheckoutCommand checkoutCommand,
+                             BindingResult bindingResult){
 
         if (bindingResult.hasErrors()) {
             return "checkoutform";
         }
 
         return "checkoutcomplete";
-
     }
-
 }

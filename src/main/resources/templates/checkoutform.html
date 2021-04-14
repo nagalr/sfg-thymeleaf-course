@@ -29,7 +29,7 @@
 
                 <span class="help-block" th:if="${#fields.hasErrors('firstName')}">
                        <ul>
-                           <li th:each="err : ${#fields.errors('firstName')}" th:text="${err}" />
+                           <li th:each="err : ${#fields.errors('firstName')}" th:text="${err}"></li>
                        </ul>
                 </span>
             </div>
